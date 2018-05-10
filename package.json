@@ -4,7 +4,7 @@
   "description": "guestbook where a user can put a comment and read comments by others",
   "main": "app",
   "scripts": {
-    "start": "node app",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Gaurav Verma",
