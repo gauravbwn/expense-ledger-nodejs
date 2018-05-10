@@ -1,8 +1,10 @@
-var http = require("http");
-var path = require("path");
-var express = require("express");
-var logger = require("morgan");
-var bodyParser = require("body-parser");
+const http = require("http");
+const path = require("path");
+const express = require("express");
+const logger = require("morgan");
+const bodyParser = require("body-parser");
+
+const port = process.env.PORT || 3001;
 
 var app = express();
 
@@ -42,6 +44,6 @@ app.use(function(request, response){
 	response.status(404).render("404");
 });
 
-http.createServer(app).listen(3001, function(){
-	console.log("Guestbook app started on port 3001");
+http.createServer(app).listen(port, function(){
+	console.log(`Expense Ledger app listening on port ${port}');
 });
