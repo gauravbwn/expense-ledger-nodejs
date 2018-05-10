@@ -1,0 +1,26 @@
+<% include header %>
+<% if(entries.length) { %>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Item</th>
+				<th>Amount</th>
+				<th>Mode</th>
+				<th>Logged At</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% entries.forEach(function(entry) { %>
+				<tr>
+					<td><%= entry.item %></td>
+					<td><%= entry.amount %></td>
+					<td><%= entry.mode %></td>
+					<td><%= entry.loggedAt %></td>
+				</tr>
+			<% }) %>
+		</tbody>
+	</table>
+<% } else { %>
+	No entries! <a href="/new-entry">Log an entry</a>
+<% } %>
+<% include footer %>

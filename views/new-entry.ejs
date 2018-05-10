@@ -1,0 +1,30 @@
+<% include header %>
+
+<h2> Log a new expenditure record </h2>
+
+<form method="post" role="form">
+	<div class="form-group">
+		<label for="item">Item</label>
+		<input type="text" class="form-control" id="item" name="item" placeholder="Item on which expenditure was done" required>
+	</div>
+	<div class="form-group">
+		<label for="amount">Amount Spent in nearest Rupees</label>
+		<input type="number" class="form-control" id="amount" name="amount" placeholder="0" min="0" required>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">Mode of Payment</div>
+		<div class="panel-body">
+			<label class="radio-inline control-label"><input type="radio" id="mode" name="mode" value="Credit Card"/>Credit Card</label>
+			<label class="radio-inline control-label"><input type="radio" id="mode" name="mode" value="Debit Card"/>Debit Card</label>
+			<label class="radio-inline control-label"><input type="radio" id="mode" name="mode" value="Internet Banking"/>Internet Banking</label>
+			<label class="radio-inline control-label"><input type="radio" id="mode" name="mode" value="eWallet"/>eWallet</label>
+			<label class="radio-inline control-label"><input type="radio" id="mode" name="mode" value="Cash"/>Cash</label>
+		</div>
+	</div>
+	<div class="form-group">
+		<input type="submit" value="Post entry" class="btn btn-primary">
+		<a href="/" class="btn btn-info" role="button">Cancel</a>
+	</div>
+</form>
+
+<% include footer %>
