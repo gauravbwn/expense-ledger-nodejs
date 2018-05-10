@@ -45,5 +45,5 @@ app.use(function(request, response){
 });
 
 http.createServer(app).listen(port, function(){
-	console.log(`Expense Ledger app listening on port ${port}');
+	console.log(`Expense Ledger app listening on port ${port}`);
 });
